@@ -13,7 +13,9 @@ class AdminHomeCategoryComponent extends Component
 
     public function mount()
     {
-        $category = HomeCategory::find(1);
+        $id = 2;
+        $category = HomeCategory::find($id);
+
         $this->selected_categories = explode(',',$category->sel_categories);
         $this->numberofproducts = $category->no_of_products;
     }
